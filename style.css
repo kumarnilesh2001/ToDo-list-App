@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background-color: #77e4c8;
+  color: white;
+}
+
+.input-container {
+  height: 180px;
+  max-width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 30px;
+  margin-top: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 20px;
+  background-color: #f8eded;
+}
+
+.input-container input {
+  padding: 10px;
+  border-radius: 10px;
+  width: 80%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background: transparent;
+  border: none;
+}
+.input-container input:focus {
+  outline: none;
+}
+
+#add-btn {
+  width: 20%;
+  padding: 10px 5px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: #36c2ce;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+#add-btn:hover {
+  background-color: #167079;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  /* border: 1px solid black; */
+  border-radius: 20px;
+  width: 80%;
+  margin: 0 auto;
+  padding: 8px 20px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.list-item p {
+  width: 100%;
+  text-align: center;
+}
+
+.icons-container {
+  display: flex;
+  gap: 30px;
+}
+
+i {
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 30px;
+  height: 30px;
+
+  border-radius: 20px;
+  border: 2px solid #555;
+}
+input[type="checkbox"]:checked {
+  background: #abd;
+}
+
+.edit-input {
+  display: none;
+  padding: 5px;
+  border-radius: 10px;
+  width: 80%;
+  border: none;
+  text-align: center;
+  background: transparent;
+}
+
+.edit-input:focus {
+  outline: none;
+}
