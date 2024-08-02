@@ -1,6 +1,6 @@
-# Simple To-Do List
+#  To-Do List using HTML, CSS , JS
 
-A simple to-do list application that allows you to add, edit, delete, and mark tasks as completed using checkboxes. This application is built with HTML, CSS, and JavaScript.
+A  to-do list application that allows you to add, edit, delete, and mark tasks as completed using checkboxes. This application is built with HTML, CSS, and JavaScript.
 
 ## Features
 
