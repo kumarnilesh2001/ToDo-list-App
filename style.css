@@ -42,9 +42,16 @@ header h1 {
   outline: none;
 }
 
+.btn-conatiner {
+  display: flex;
+  max-width: 80%;
+  margin: 0 auto;
+  gap: 30px;
+}
+
 #add-btn {
-  width: 20%;
-  padding: 10px 5px;
+  width: 300px;
+  padding: 5px 10px;
   margin-top: 20px;
   border-radius: 10px;
   font-weight: 700;
@@ -58,6 +65,23 @@ header h1 {
 
 #add-btn:hover {
   background-color: #167079;
+}
+#clear-btn {
+  display: none;
+  width: 80%;
+  padding: 10px 5px;
+  margin-top: 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: #e4003a;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  cursor: pointer;
+}
+#clear-btn:hover {
+  background-color: #ba002f;
 }
 
 .list-container {

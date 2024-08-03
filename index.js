@@ -2,6 +2,7 @@
 const textInput = document.querySelector(".text-input");
 const addBtn = document.querySelector("#add-btn");
 const listContainer = document.querySelector(".list-container");
+const clearBtn = document.querySelector("#clear-btn");
 
 //Events
 
@@ -13,6 +14,14 @@ addBtn.addEventListener("click", () => {
 
   createListEle(textInput.value);
   textInput.value = "";
+  clearBtn.style.display = "block";
+  saveData();
+});
+
+clearBtn.addEventListener("click", () => {
+  listContainer.innerHTML = "";
+  clearBtn.style.display = "none";
+  saveData();
 });
 
 //Functions
@@ -52,9 +61,14 @@ function createListEle(listInput) {
   checkInput.addEventListener("change", () => {
     checkListEle(checkInput, lists, listItem);
   });
+  // clearBtn.addEventListener("click", () => {
+  //   showClearAll(listItem);
+  //   clearBtn.style.display = "none";
+  // });
 
   const listContainer = document.querySelector(".list-container");
   listContainer.appendChild(listItem);
+
   saveData();
 }
 
@@ -116,5 +130,15 @@ function showData() {
     editListEle(pencilIcon, lists, editInput);
     deleteListEle(deleteIcon, item);
   });
+  if (allitems.length > 0) {
+    clearBtn.style.display = "block";
+  } else {
+    clearBtn.style.display = "none";
+  }
 }
 showData();
+
+function showClearAll(itemList) {
+  itemList.remove();
+  saveData();
+}
