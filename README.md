@@ -10,6 +10,7 @@ A  to-do list application that allows you to add, edit, delete, and mark tasks a
 - **Mark Task as Completed**: Check or uncheck the checkbox to mark the task as completed or not completed. Completed tasks are shown with a strike-through effect.
 - **Save Tasks**: The tasks are saved automatically to the browser's local storage.
 - **Load Tasks**: The tasks are loaded automatically from the browser's local storage when the page is reloaded.
+- **Clear All Tasks**: Click the "Clear All" button to remove all tasks. This button will only be visible if there are tasks present.
 
 
 ### Prerequisites
@@ -26,6 +27,11 @@ A  to-do list application that allows you to add, edit, delete, and mark tasks a
 - ## Deployed link :-  https://todolistappjavascript.netlify.app/
 
 ## Screenshots :- 
-![Screenshot 2024-08-02 213644](https://github.com/user-attachments/assets/cd48ecd6-2984-4ff3-989f-b2383e94116a)
-![Screenshot 2024-08-02 213659](https://github.com/user-attachments/assets/6c58b2b4-0f24-41e1-9fc8-84f3b3fb96b4)
+
+![Screenshot 2024-08-03 151536](https://github.com/user-attachments/assets/16e2b3ca-1b06-4cdd-b454-0eb1d42d7103)
+
+![Screenshot 2024-08-03 151703](https://github.com/user-attachments/assets/ad05f9a6-a902-4605-9618-d6fcf94ae81a)
+
+![Screenshot 2024-08-03 151726](https://github.com/user-attachments/assets/4404f6fb-4e45-49aa-9881-7055c0449db8)
+
 
