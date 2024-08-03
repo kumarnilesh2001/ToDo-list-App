@@ -8,6 +8,8 @@ A  to-do list application that allows you to add, edit, delete, and mark tasks a
 - **Edit Task**: Click the pencil icon to edit the task. Click the save icon to save the changes.
 - **Delete Task**: Click the trash icon to delete the task.
 - **Mark Task as Completed**: Check or uncheck the checkbox to mark the task as completed or not completed. Completed tasks are shown with a strike-through effect.
+- **Save Tasks**: The tasks are saved automatically to the browser's local storage.
+- **Load Tasks**: The tasks are loaded automatically from the browser's local storage when the page is reloaded.
 
 
 ### Prerequisites
