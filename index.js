@@ -1,10 +1,16 @@
 //Selectors
 const textInput = document.querySelector(".text-input");
 const addBtn = document.querySelector("#add-btn");
+const listContainer = document.querySelector(".list-container");
 
 //Events
 
 addBtn.addEventListener("click", () => {
+  if (textInput.value === "") {
+    alert("Please enter a task");
+    return;
+  }
+
   createListEle(textInput.value);
   textInput.value = "";
 });
@@ -49,6 +55,7 @@ function createListEle(listInput) {
 
   const listContainer = document.querySelector(".list-container");
   listContainer.appendChild(listItem);
+  saveData();
 }
 
 function deleteListEle(deleteicon, listItem) {
@@ -63,11 +70,13 @@ function editListEle(pencilIcon, lists, editInput) {
       editInput.style.display = "block";
       lists.style.display = "none";
       pencilIcon.classList.replace("fa-pencil", "fa-save");
+      saveData();
     } else {
       lists.textContent = editInput.value;
       editInput.style.display = "none";
       lists.style.display = "block";
       pencilIcon.classList.replace("fa-save", "fa-pencil");
+      saveData();
     }
   });
 }
@@ -76,8 +85,36 @@ function checkListEle(checkInput, lists, listItem) {
   if (checkInput.checked == true) {
     lists.style.textDecoration = "line-through";
     listItem.style.backgroundColor = "#36C2CE";
+    saveData();
   } else {
     lists.style.textDecoration = "none";
     listItem.style.backgroundColor = "white";
+    saveData();
   }
 }
+
+function saveData() {
+  localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showData() {
+  listContainer.innerHTML = localStorage.getItem("data") || "";
+
+  const allitems = document.querySelectorAll(".list-item");
+
+  allitems.forEach((item) => {
+    const checkInput = item.querySelector('input[type="checkbox"]');
+
+    const lists = item.querySelector("p");
+    const editInput = item.querySelector(".edit-input");
+    const pencilIcon = item.querySelector(".pencil");
+    const deleteIcon = item.querySelector(".delete");
+
+    checkInput.addEventListener("change", () => {
+      checkListEle(checkInput, lists, item);
+    });
+    editListEle(pencilIcon, lists, editInput);
+    deleteListEle(deleteIcon, item);
+  });
+}
+showData();
